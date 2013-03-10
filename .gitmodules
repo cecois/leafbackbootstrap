@@ -1,0 +1,15 @@
+[submodule "src/lib/leaflet"]
+	path = src/lib/leaflet
+	url = git://github.com/Leaflet/Leaflet.git
+[submodule "src/lib/less.js"]
+	path = src/lib/less.js
+	url = git://github.com/cloudhead/less.js.git
+[submodule "src/lib/backbone"]
+	path = src/lib/backbone
+	url = git://github.com/documentcloud/backbone.git
+[submodule "src/lib/bootstrap"]
+	path = src/lib/bootstrap
+	url = git://github.com/twitter/bootstrap.git
+[submodule "src/lib/handlebars.js"]
+	path = src/lib/handlebars.js
+	url = git://github.com/wycats/handlebars.js.git
