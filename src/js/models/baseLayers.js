@@ -1,14 +1,14 @@
 var BaseLayersCollection = Backbone.Collection.extend({
 	model: BaseLayer,
 	url: function() {
-		return "js/models/layers.json"
+		return "js/models/layers.min.json"
 	},
 	initialize: function(options) {
 		options || (options = {});
+		// this.query = options.query;
 	},
 
 	parse: function(data) {
-
 		var layers = data.layers;
 
 		var activeLayer = _.find(layers, function(lay) {
@@ -16,11 +16,9 @@ var BaseLayersCollection = Backbone.Collection.extend({
 		});
 		var activeLayerDef = activeLayer.definition;
 
-		window.appBaseMap = new BaseMap();
+
+
 		appBaseMap.set(activeLayer);
-		window.appBaseMapView = new BaseMapView({
-			model: appBaseMap
-		});
 
 		return layers;
 	}

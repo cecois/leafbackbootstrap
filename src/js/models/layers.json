@@ -2,7 +2,7 @@
 
     "layers": [{
         "name": "stamen_watercolor",
-        "active": false,
+        "active": true,
         "nom": "Stamen Watercolor",
             "source": "stamen",
         "thumb": "http://tile.stamen.com/watercolor/12/655/1583.jpg",
@@ -12,7 +12,7 @@
         }
     }, {
         "name": "cloudmade",
-        "active": true,
+        "active": false,
         "source":"cloudmade",
         "nom": "CloudMade Grey",
         "thumb": "http://c.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/22677/256/3/4/2.png",

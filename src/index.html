@@ -14,23 +14,12 @@
     <!-- LEAFLET -->
       <link rel="stylesheet" href="lib/Leaflet/dist/leaflet.css" />
   <!--[if lte IE 8]><link rel="stylesheet" href="lib/Leaflet/dist/leaflet.ie.css" /><![endif]-->
-  <script src="lib/Leaflet/dist/leaflet.js"></script>
-
-
-  <!-- BACKBONE -->
-<script type="text/javascript" language="Javascript" src="lib/backbone/backbone-min.js"></script>
-
-<!-- BASEMAP 
-<script src="js/models/baseMap.js" type="text/javascript"></script>
-<script src="js/views/baseMapView.js" type="text/javascript"></script>
-<script src="js/models/baseLayer.js" type="text/javascript"></script>
-<script src="js/models/baseLayers.js" type="text/javascript"></script>
--->
+  
 
 
 <!-- STYLES -->
 <link rel="stylesheet/less" type="text/css" href="css/app.less" />
-<link rel="stylesheet/less" type="text/css" href="css/menu-basemap.less" />
+<link rel="stylesheet/less" type="text/css" href="css/menu-baselayer.less" />
 
     <style>
 
@@ -264,6 +253,10 @@ the other is to use a strut element, as we do here (see bottom of body) -->
                 </li>
               </ul>
             </div><!--/.nav-collapse -->
+
+<div id="menu-basemap" class="pull-right">
+</div> <!-- menu-basemap -->
+
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
@@ -346,6 +339,10 @@ the other is to use a strut element, as we do here (see bottom of body) -->
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
     <script src="lib/bootstrap/docs/assets/js/jquery.js"></script>
     <script src="lib/bootstrap/docs/assets/js/bootstrap-transition.js"></script>
     <script src="lib/bootstrap/docs/assets/js/bootstrap-alert.js"></script>
@@ -359,6 +356,29 @@ the other is to use a strut element, as we do here (see bottom of body) -->
     <script src="lib/bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
     <script src="lib/bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
     <script src="lib/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+    <script src="lib/Leaflet/dist/leaflet.js"></script>
+    <script src="lib/tile.stamen.js"></script>
+
+
+  <!-- BACKBONE (w/ UNDERSCORE) -->
+<script type="text/javascript" language="Javascript" src="lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" language="Javascript" src="lib/backbone/backbone-min.js"></script>
+
+<script type="text/javascript" language="Javascript" src="lib/handlebars.js/dist/handlebars.runtime.js"></script>
+
+<!-- HANDLEBARS TEMPLATES -->
+<script type="text/javascript" language="Javascript" src="js/templates.js"></script>
+
+
+<!-- BASEMAP 
+-->
+<script src="js/models/baseMap.js" type="text/javascript"></script>
+<script src="js/views/baseMapView.js" type="text/javascript"></script>
+<script src="js/models/baseLayer.js" type="text/javascript"></script>
+<script src="js/models/baseLayers.js" type="text/javascript"></script>
+<script src="js/views/baseLayerMenuView.js" type="text/javascript"></script>
+<script src="js/views/baseLayersMenuView.js" type="text/javascript"></script>
+
 
     <script src="lib/bootstrap/docs/assets/js/holder/holder.js"></script>
     <script src="js/app.js"></script>

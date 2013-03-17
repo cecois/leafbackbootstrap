@@ -1,5 +1,5 @@
-var BaseMapsMenuView = Backbone.View.extend({
-
+var BaseLayersMenuView = Backbone.View.extend({
+  el: "#menu-basemap",
   tagName : "ul",
   className : "thumbnails",
 
@@ -10,9 +10,9 @@ var BaseMapsMenuView = Backbone.View.extend({
 
 render : function() {
 
-    this.collection.each(function(basemap) {
-      var appBaseMapMenuView = new BaseMapMenuView({ model : basemap });
-      $(this.el).append(appBaseMapMenuView.render().el);
+    this.collection.each(function(baselayer) {
+      var appBaseLayerMenuView = new BaseLayerMenuView({ model : baselayer });
+      $(this.el).append(appBaseLayerMenuView.render().el);
     }, this);
     return this
   },

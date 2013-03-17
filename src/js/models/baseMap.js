@@ -9,6 +9,7 @@ var BaseMap = Backbone.Model.extend({
 		thumburl:''
 	},
 initialize: function(){
+	console.log("BaseMap:");console.log(this);
 return this;
 },
 getBounds:function(){
