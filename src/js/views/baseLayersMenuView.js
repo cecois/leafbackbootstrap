@@ -5,7 +5,7 @@ var BaseLayersMenuView = Backbone.View.extend({
 
   initialize:function(){
     this.render();
-    this.collection.bind('change:active', this.process, this);
+    // this.collection.bind('change:active', this.setActiveStatus, this);
   },
 
 render : function() {
@@ -16,7 +16,7 @@ render : function() {
     }, this);
     return this
   },
-  process:function(amodel){
+  setActiveStatus:function(amodel){
  //A model was toggled (on or off)
     if(amodel.get('active') == true) {
       //A model was toggled ON, so check if a different model is already selected

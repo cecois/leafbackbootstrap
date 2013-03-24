@@ -1,13 +1,13 @@
 var BaseLayerMenuView = Backbone.View.extend({
   tagName:"li",
-  template: Handlebars.templates['tpl-menu-BaseLayer-item'],
+  template: Handlebars.templates['tpl-menu-baselayer-item'],
   events: {
-    "click .thumbnail":"setActiveLayer",
+    "click .thumbnail":"activate",
     // "click a":"killtt",
     // "click a":"rewire"
   },
   initialize: function() {
-    console.log("bmmview init, this.model:");console.log(this.model.get("name"));
+    this.render()
     this.model.bind("change", this.render, this);
 
   },
@@ -17,13 +17,15 @@ var BaseLayerMenuView = Backbone.View.extend({
 
   },
 
-  setActiveLayer: function(){
-    console.log("in bmmview setBaseLayer, this.model pre-set:");console.log(this.model.get("name"));
-this.model.set({"active":true});
+  activate: function(){
+this.model.set({"active":true},{'render':0});
 // console.log("in bmmview setBaseLayer, this.model post-set:");console.log(this.model.get("name"));
 // var newBaseLayer = this.model;
 // console.log("newbaselayer:");console.log(newBaseLayer);
 // appBaseLayer.set(newBaseLayer);
+// appBaseMapView.render()
+// appBaseMapView.update()
+// appBaseLayers.process(this.model)
   },
 
 	render: function() {
